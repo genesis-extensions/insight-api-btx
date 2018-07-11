@@ -1,18 +1,18 @@
 # Insight API
 
-A ZelCash blockchain REST and web socket API service for [Bitcore Node ZelCash](https://github.com/TheTrunk/bitcore-node-zelcash).
+A BitCore blockchain REST and web socket API service for [Bitcore Node BitCore](https://github.com/BTXinsight/bitcore-node-btx).
 
-This is a backend-only service. If you're looking for the web frontend application, take a look at https://github.com/TheTrunk/insight-ui-zelcash.
+This is a backend-only service. If you're looking for the web frontend application, take a look at https://github.com/BTXinsight/insight-ui-btx.
 
 ## Getting Started
 
 ```bashl
-git clone https://github.com/TheTrunk/bitcore-node-zelcash.git
-cd bitcore-node-zelcash
+git clone https://github.com/BTXinsight/bitcore-node-btx.git
+cd bitcore-node-btx
 npm install
 bitcore-node create mynode
 cd mynode
-bitcore-node install insight-api-zelcash
+bitcore-node install insight-api-btx
 bitcore-node start
 ```
 
@@ -20,9 +20,9 @@ The API endpoints will be available by default at: `http://localhost:3001/insigh
 
 ## Prerequisites
 
-- [Bitcore Node ZelCash](https://github.com/TheTrunk/bitcore-node-zelcash)
+- [Bitcore Node BitCore](https://github.com/BTXinsight/bitcore-node-btx)
 
-**Note:** You can use an existing ZelCash data directory, however `txindex`, `addressindex`, `timestampindex` and `spentindex` needs to be set to true in `zelcash.conf`, as well as a few other additional fields.
+**Note:** You can use an existing BitCore data directory, however `txindex`, `addressindex`, `timestampindex` and `spentindex` needs to be set to true in `bitcore.conf`, as well as a few other additional fields.
 
 ## Notes 
 
@@ -37,8 +37,8 @@ There are a few changes to the `GET` endpoint for `/addr/[:address]`:
 
 Some additional general notes:
 - The transaction history for an address will be sorted in block order
-- The response for the `/sync` endpoint does not include `startTs` and `endTs` as the sync is no longer relevant as indexes are built in zelcashd.
-- The endpoint for `/peer` is no longer relevant connection to zelcashd is via ZMQ.
+- The response for the `/sync` endpoint does not include `startTs` and `endTs` as the sync is no longer relevant as indexes are built in bitcored.
+- The endpoint for `/peer` is no longer relevant connection to bitcored is via ZMQ.
 - `/tx` endpoint results will now include block height, and spentTx related fields will be set to `null` if unspent.
 - `/block` endpoint results does not include `confirmations` and will include `poolInfo`.
 
@@ -56,7 +56,7 @@ The `/tx/<txid>` endpoint JSON response will not include the following fields on
 object.
 - `spentTs`
 
-The `/status?q=getTxOutSetInfo` method has also been removed due to the query being very slow and locking zelcashd.
+The `/status?q=getTxOutSetInfo` method has also been removed due to the query being very slow and locking bitcored.
 
 Plug-in support for Insight API is also no longer available, as well as the endpoints:
 - `/email/retrieve`
@@ -76,7 +76,7 @@ To protect the server, insight-api has a built it query rate limiter. It can be 
     }
   }
 ```
-With all the configuration options available: https://github.com/TheTrunk/insight-api-zelcash/blob/master/lib/ratelimiter.js#L10-17
+With all the configuration options available: https://github.com/BTXinsight/insight-api-btx/blob/master/lib/ratelimiter.js#L10-17
 
 Or disabled entirely with:
 ``` json
@@ -348,7 +348,7 @@ POST response:
   /api/peer
 ```
 
-### Status of the ZelCash Network
+### Status of the BitCore Network
 ```
   /api/status?q=xxx
 ```
@@ -393,7 +393,7 @@ Sample output:
 }
 ```
 
-`<zelcashAddress>`: new transaction concerning <zelcashAddress> received from network. This event is published in the `<zelcashAddress>` room.
+`<bitcoreAddress>`: new transaction concerning <bitcoreAddress> received from network. This event is published in the `<bitcoreAddress>` room.
 
 `status`: every 1% increment on the sync task, this event will be triggered. This event is published in the `sync` room.
 

@@ -1,8 +1,8 @@
 {
-  "name": "insight-api-zelcash",
-  "description": "A ZelCash blockchain REST and web socket API service for Bitcore Node.",
+  "name": "insight-api-btx",
+  "description": "A BitCore blockchain REST and web socket API service for Bitcore Node.",
   "version": "0.4.3",
-  "repository": "git://github.com/TheTrunk/insight-api-zelcash.git",
+  "repository": "git://github.com/BTXinsight/insight-api-btx.git",
   "contributors": [
     {
       "name": "Gustavo Cortez",
@@ -46,15 +46,15 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/TheTrunk/insight-api-zelcash/issues"
+    "url": "https://github.com/BTXinsight/insight-api-btx/issues"
   },
-  "homepage": "https://github.com/TheTrunk/insight-api-zelcash",
+  "homepage": "https://github.com/BTXinsight/insight-api-btx",
   "license": "MIT",
   "keywords": [
     "insight",
     "insight api",
     "blockchain",
-    "zelcash api",
+    "btx api",
     "blockchain api",
     "json",
     "bitcore"
@@ -69,8 +69,8 @@
   "bitcoreNode": "lib",
   "dependencies": {
     "async": "*",
-    "bitcore-lib-zelcash": "git://github.com/TheTrunk/bitcore-lib-zelcash#master",
-    "bitcore-message-zelcash": "git://github.com/TheTrunk/bitcore-message-zelcash#master",
+    "bitcore-lib-btx": "git://github.com/BTXinsight/bitcore-lib-btx#master",
+    "bitcore-message-btx": "git://github.com/BTXinsight/bitcore-message-btx#master",
     "body-parser": "^1.13.3",
     "compression": "^1.6.1",
     "lodash": "^2.4.1",
