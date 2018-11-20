@@ -1,8 +1,8 @@
 {
-  "name": "insight-api-btx",
-  "description": "A BitCore blockchain REST and web socket API service for Bitcore Node.",
+  "name": "insight-api-genesis",
+  "description": "A Genesis blockchain REST and web socket API service for Bitcore Node.",
   "version": "0.4.3",
-  "repository": "git://github.com/BTXinsight/insight-api-btx.git",
+  "repository": "git://github.com/genesis-extended/insight-api-genesis.git",
   "contributors": [
     {
       "name": "Gustavo Cortez",
@@ -46,15 +46,15 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/BTXinsight/insight-api-btx/issues"
+    "url": "https://github.com/genesis-extended/insight-api-genesis/issues"
   },
-  "homepage": "https://github.com/BTXinsight/insight-api-btx",
+  "homepage": "https://github.com/genesis-extended/insight-api-genesis",
   "license": "MIT",
   "keywords": [
     "insight",
     "insight api",
     "blockchain",
-    "btx api",
+    "genesis api",
     "blockchain api",
     "json",
     "bitcore"
@@ -69,8 +69,8 @@
   "bitcoreNode": "lib",
   "dependencies": {
     "async": "*",
-    "bitcore-lib-btx": "git://github.com/BTXinsight/bitcore-lib-btx#master",
-    "bitcore-message-btx": "git://github.com/BTXinsight/bitcore-message-btx#master",
+    "bitcore-lib-genesis": "git://github.com/genesis-extended/bitcore-lib-genesis#master",
+    "bitcore-message-genesis": "git://github.com/genesis-extended/bitcore-message-genesis#master",
     "body-parser": "^1.13.3",
     "compression": "^1.6.1",
     "lodash": "^2.4.1",
